@@ -31,7 +31,7 @@ public class SettingMenu : Menu
     {
         base.OnMenuOpened();
 
-        _adsButton.interactable = true;
+        // _adsButton.interactable = true;
         _closeButton.interactable = true;
 
         SetIconToggle();
@@ -43,7 +43,7 @@ public class SettingMenu : Menu
         _sfxImage = _toggleSFXButton.GetComponent<Image>();
         _vibrateImage = _toggleVibrateButton.GetComponent<Image>();
 
-        OnButtonPressed(_adsButton, AdsButtonListener);
+        // OnButtonPressed(_adsButton, AdsButtonListener);
         OnButtonPressed(_closeButton, CloseButtonListener);
         OnButtonPressed(_toggleMusicButton, ToggleMusicButtonListener);
         OnButtonPressed(_toggleSFXButton, ToggleSFXButtonListener);
@@ -98,7 +98,7 @@ public class SettingMenu : Menu
     private void ConsentClosedCallback()
     {
         bool isConsentRequired = AdManager.Instance.IsPrivacyRequire();
-        _adsButton.gameObject.SetActive(isConsentRequired);
+        // _adsButton.gameObject.SetActive(isConsentRequired);
 
         if (MenuController.Instance.MenuStack.Count > 0)
         {

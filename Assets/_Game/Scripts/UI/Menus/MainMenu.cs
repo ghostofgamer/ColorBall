@@ -4,16 +4,17 @@ using UnityEngine.UI;
 
 public class MainMenu : Menu
 {
-    [Header("References")]
-    [SerializeField] Button _themeButton;
+    [Header("References")] [SerializeField]
+    Button _themeButton;
+
     [SerializeField] Button _creditButton;
     [SerializeField] Button _rateButton;
     [SerializeField] Button _settingsButton;
 
-    [Header("Theme SPrite Toggle")]
+    [Header("Theme SPrite Toggle")] 
     [SerializeField] Sprite _lightImg;
     [SerializeField] Sprite _darkImg;
-
+ 
     [SerializeField] Image _themeImage;
 
     private void Start()

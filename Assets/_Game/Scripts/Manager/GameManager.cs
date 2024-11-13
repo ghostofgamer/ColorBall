@@ -1,10 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Camera _mainCam;
-
+    [SerializeField] Sprite _darkBackgroundImg;
+    [SerializeField] Sprite _lightBackgroundImg;
+    [SerializeField] Sprite _lightDeadZone;
+    [SerializeField] Sprite _darkDeadZone;
+    [SerializeField] SpriteRenderer[] _deadZoneSprites;
+    [SerializeField] private Image _backgroundImg;
+    
     [Header("External Components")]
     [SerializeField] Player _player;
     [SerializeField] GameCustomizationSO _gameCustom;
@@ -65,6 +72,9 @@ public class GameManager : MonoBehaviour
     {
         _isDefaultTheme = SaveData.GetThemeState();
         _mainCam.backgroundColor = _isDefaultTheme ? _gameCustom.DefaultColor : _gameCustom.DarkColor;
+        
+        foreach (SpriteRenderer sprite in _deadZoneSprites)
+            sprite.sprite = SaveData.GetThemeState() ? _lightDeadZone : _darkDeadZone;
     }
 
     private void Update()
@@ -90,6 +100,10 @@ public class GameManager : MonoBehaviour
         _isDefaultTheme = !_isDefaultTheme;
         SaveData.SetThemeState(_isDefaultTheme);
 
+        foreach (SpriteRenderer sprite in _deadZoneSprites)
+            sprite.sprite = SaveData.GetThemeState() ? _lightDeadZone : _darkDeadZone;
+                
+        _backgroundImg.sprite = SaveData.GetThemeState() ? _lightBackgroundImg : _darkBackgroundImg;
         _mainCam.backgroundColor = _isDefaultTheme ? _gameCustom.DefaultColor : _gameCustom.DarkColor;
     }
 
