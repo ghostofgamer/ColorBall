@@ -106,6 +106,7 @@ public class TweenUI : MonoBehaviour
 
     private void Scale(TweenStat stat)
     {
+        Debug.Log("THIS " + this.name);
         _rect.localScale = stat._from;
 
         stat._tweenObj = LeanTween.scale(_rect, stat._to, stat._duration);

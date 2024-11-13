@@ -12,7 +12,9 @@ public class GameOverMenu : Menu
     [SerializeField] Button _restartButton;
     [SerializeField] Button _homeButton;
     [SerializeField] Button _shareButton;
-
+    [SerializeField] private GameObject _panel;
+    [SerializeField]private CoinViewer _coinViewer;
+    
     private ShareOnSocialMedia _share;
 
     protected override void Awake()
@@ -25,12 +27,19 @@ public class GameOverMenu : Menu
     protected override void OnMenuOpened()
     {
         base.OnMenuOpened();
-
+        _panel.SetActive(true);
 #if UNITY_EDITOR
         if (!UnityEditor.EditorApplication.isPlaying) return;
 #endif
 
         SetScoreDisplay();
+    }
+
+    protected override void OnMenuClosed()
+    {
+        _panel.SetActive(false);
+        Debug.Log("Проиграл ");
+        base.OnMenuClosed();
     }
 
     private void Start()
@@ -44,6 +53,9 @@ public class GameOverMenu : Menu
     {
         ScoreManager.Instance.UpdateBestScore();
 
+        // PlayerPrefs.SetInt("Coin",ScoreManager.Instance.Score);
+        ScoreManager.Instance.AddCoin(ScoreManager.Instance.Score);
+        // _coinViewer.ShowCoinText();
         _scoreText.text = ScoreManager.Instance.Score.ToString();
         _bestScoreText.text = SaveData.GetBestScore().ToString();
     }
@@ -68,7 +80,8 @@ public class GameOverMenu : Menu
     private void RestartButton()
     {
         _restartButton.interactable = false;
-
+        // _panel.SetActive(false);
+        // Debug.Log("Проиграл ");
         StartCoroutine(ReloadLevelAsync(() =>
         {
             MenuController.Instance.SwitchMenu(MenuType.Gameplay);
