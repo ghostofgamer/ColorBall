@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0896d6c5b1cb141903ec4ec539f4b4, type: 3}
+  m_Name: Game Customization
+  m_EditorClassIdentifier: 
+  _defaultColor: {r: 0.9254902, g: 0.93333334, b: 0.85882354, a: 1}
+  _darkColor: {r: 0.11372549, g: 0.1254902, b: 0.17254902, a: 1}
+  _colorList:
+  - {r: 0.92941177, g: 0.33333334, b: 0.23137252, a: 1}
+  - {r: 0.9647059, g: 0.81263745, b: 0.3647059, a: 1}
+  - {r: 0.19575472, g: 0.7830189, b: 0.40812927, a: 1}
+  - {r: 0.11764707, g: 0.38823533, b: 0.6117647, a: 1}
+  - {r: 0.6214401, g: 0.49461553, b: 0.8962264, a: 1}
+  _wallParentList:
+  - {fileID: 61821052990421729, guid: 0bd4d281d59a9d8438bb33051cd9e2db, type: 3}
+  - {fileID: 61821052990421729, guid: c01821fd6f3fb9f478d555005073f60a, type: 3}
+  - {fileID: 1718017312051672259, guid: 0ec05badb108c1a4ab5d58f34cc38f23, type: 3}
+  - {fileID: 5952803694801367136, guid: b986a0c3745f8bf41a676b714016f7f6, type: 3}
+  _jumpForce: 13
+  _horizontalSpeed: 3.8
+  _gravityScale: 4
