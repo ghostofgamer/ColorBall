@@ -20,6 +20,18 @@ MonoBehaviour:
   - {r: 0.19575472, g: 0.7830189, b: 0.40812927, a: 1}
   - {r: 0.11764707, g: 0.38823533, b: 0.6117647, a: 1}
   - {r: 0.6214401, g: 0.49461553, b: 0.8962264, a: 1}
+  _spriteList:
+  - {fileID: 21300000, guid: a29043bf2235ccb478311fb1a7dd11a6, type: 3}
+  - {fileID: 21300000, guid: 58f3e07f6b83bca439b6092d04f59bbf, type: 3}
+  - {fileID: 21300000, guid: b8f768a5053b9c746aa7e82c2efe03b9, type: 3}
+  - {fileID: 21300000, guid: b46eab7b26ec40a42848be4832704636, type: 3}
+  - {fileID: 21300000, guid: 7e857e9d9ad21fc42b4c3e42c8c54ccc, type: 3}
+  _spriteWalls:
+  - {fileID: 21300000, guid: 9be2f1cc952f72b4ab319c9305cd1031, type: 3}
+  - {fileID: 21300000, guid: 3aa620c4fe700254b8034a28e4b2f2ab, type: 3}
+  - {fileID: 21300000, guid: f5b451e97148a974189e5d92b3543f3f, type: 3}
+  - {fileID: 21300000, guid: 8ebba47ade3edd3459422e053d32940c, type: 3}
+  - {fileID: 21300000, guid: 47c5cc4f790684845ac19fe997230c33, type: 3}
   _wallParentList:
   - {fileID: 61821052990421729, guid: 0bd4d281d59a9d8438bb33051cd9e2db, type: 3}
   - {fileID: 61821052990421729, guid: c01821fd6f3fb9f478d555005073f60a, type: 3}

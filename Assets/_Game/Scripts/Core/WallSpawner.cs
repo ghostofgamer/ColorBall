@@ -44,7 +44,8 @@ public class WallSpawner : MonoBehaviour
         SpawnObstacle();
 
         WallParent wallParent = Instantiate(_selectedWall, transform);
-        wallParent.transform.position = Vector2.right * _wallGap * _wallDirection;
+        // wallParent.transform.position = Vector2.right * _wallGap * _wallDirection;
+        wallParent.transform.position = Vector2.right * 6.3f * _wallDirection;
         wallParent.gameObject.name = $"Wall Parent {_wallCount}";
 
         _wallParentList.Add(wallParent);

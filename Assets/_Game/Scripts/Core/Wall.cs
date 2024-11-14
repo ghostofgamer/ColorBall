@@ -15,6 +15,7 @@ public class Wall : MonoBehaviour
     {
         _colorIndex = colorIndex;
 
-        _renderer.color = _gameCustom.ColorList[_colorIndex];
+        // _renderer.color = _gameCustom.ColorList[_colorIndex];
+        _renderer.sprite = _gameCustom.SpriteWalls[_colorIndex];
     }
 }

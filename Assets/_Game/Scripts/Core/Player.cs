@@ -124,7 +124,8 @@ public class Player : MonoBehaviour
         Color color = _gameCustom.ColorList[_currentColorIndex];
 
         // change ball color
-        _renderer.color = color;
+        // _renderer.color = color;
+        _renderer.sprite = _gameCustom.SpriteList[colorIndex];
 
         // change trail renderer color
         _trailRenderer.material.color = color;
