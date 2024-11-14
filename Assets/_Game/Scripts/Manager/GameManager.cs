@@ -112,7 +112,9 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.PlayAudio(AudioType.FAIL);
         VibrationManager.Instance.StartVibration();
 
-        if (CanRevive())
+        MenuController.Instance.SwitchMenu(MenuType.GameOver);
+        
+        /*if (CanRevive())
         {
             _playerRevived = true;
 
@@ -121,7 +123,7 @@ public class GameManager : MonoBehaviour
         else
         {
             MenuController.Instance.SwitchMenu(MenuType.GameOver);
-        }
+        }*/
     }
 
     private bool CanRevive()

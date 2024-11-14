@@ -45,6 +45,7 @@ public class MainMenu : Menu
 
     private void CreditButtonPressed()
     {
-        MenuController.Instance.OpenMenu(MenuType.Credit);
+        Application.OpenURL("http://www.maxfabrique.com/");
+        // MenuController.Instance.OpenMenu(MenuType.Credit);
     }
 }

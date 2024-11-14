@@ -38,7 +38,6 @@ public class GameOverMenu : Menu
     protected override void OnMenuClosed()
     {
         _panel.SetActive(false);
-        Debug.Log("Проиграл ");
         base.OnMenuClosed();
     }
 
